@@ -31,10 +31,10 @@
         android:background="#a7976a">
 
         <ImageButton
-            android:layout_width="47dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton5"
-            android:src="@drawable/boton_home_mini"
+            android:src="@drawable/home_boton"
             android:layout_marginLeft="40dp"
             android:layout_gravity="center_vertical" />
 
