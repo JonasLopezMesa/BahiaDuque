@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jons.bahiaduque.ActivityPresentation"
+    android:focusable="true">
+
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        android:id="@+id/imageChef"
+        android:src="@drawable/chef"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/estrellas"
+        android:src="@drawable/michelin2"
+        android:layout_gravity="left|top"
+        android:layout_above="@+id/textView"
+        android:layout_toEndOf="@+id/imageChef" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/chefBelga"
+        android:id="@+id/textView"
+        android:layout_gravity="left|top"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/estrellas"
+        android:textColor="#85868a"
+        android:fontFamily="TimesNewRoman"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Carta"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/selectobuttoncarta"
+        android:id="@+id/buttonCarta"
+        android:layout_marginEnd="142dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/imageChef"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/chefBelga_frase"
+        android:id="@+id/Resenna"
+        android:textStyle="bold"
+        android:textColor="#798daa"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="62dp"
+        android:layout_above="@+id/buttonCarta"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_toEndOf="@+id/imageChef" />
+
+</RelativeLayout>

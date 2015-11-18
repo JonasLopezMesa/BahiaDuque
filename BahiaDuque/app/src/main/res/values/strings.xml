@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BahiaDuque</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="chefBelga">Chef belga y propietario del restaurante \"L\'Eau - vive \" en Namur con dos estrellas Michellin y la brasserie \"Le comptoir de L\'Eau - vive \"
+        en Erpent les propone una seleción de n platos tópicos de Brasseri adaptados al gusto de hoy.</string>
+    <string name="chefBelga_frase">\"Pasión,creatividad y sabores son los ingredientes de mi cocina, espero que les guste \"</string>
 </resources>
