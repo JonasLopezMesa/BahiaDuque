@@ -1,38 +1,39 @@
 package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
 public class ActivityPresentation extends ActionBarActivity implements View.OnClickListener {
 
 
-    ImageButton home;
-    ImageButton foto;
-    ImageButton carta;
-
-    int request;
+    private ImageButton home;
+    private ImageButton foto;
+    private ImageButton carta;
+    private Button  buttonCarta;
+    private int request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentation);
-
-
         home = (ImageButton) findViewById(R.id.imageView2);
         home.setOnClickListener(this);
         foto = (ImageButton) findViewById(R.id.imageView3);
         foto.setOnClickListener(this);
         carta = (ImageButton) findViewById(R.id.imageView4);
         carta.setOnClickListener(this);
+        buttonCarta = (Button) findViewById(R.id.buttonCarta);
+        buttonCarta.setOnClickListener(this);
     }
-
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -73,12 +74,16 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
                 startActivityForResult(intent1, request);
                 break;
             case R.id.imageView3:
-                Intent intent2 = new Intent(ActivityPresentation.this, activity_galeriafotos.class);
+                Intent intent2 = new Intent(ActivityPresentation.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent2, request);
                 break;
             case R.id.imageView4:
                 Intent intent3 = new Intent(ActivityPresentation.this, ActivityPresentation.class);
                 startActivityForResult(intent3, request);
+                break;
+            case R.id.buttonCarta:
+                Intent intent4 = new Intent(ActivityPresentation.this, ActivityCarta.class);
+                startActivityForResult(intent4, request);
                 break;
         }
     }

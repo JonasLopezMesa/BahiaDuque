@@ -2,8 +2,6 @@ package com.example.jons.bahiaduque;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -17,8 +15,9 @@ public class ActivityCarta extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
 
+        //Imagenes a Insertar
         Integer[] image = { R.drawable.plato1, R.drawable.plato2, R.drawable.p2_1,R.drawable.p2_2,R.drawable.p2_3,R.drawable.p3_1,R.drawable.p3_2,R.drawable.p3_3,
-                R.drawable.p4_1,R.drawable.p4_2,R.drawable.p4_3,};
+                R.drawable.p4_1,R.drawable.p4_2,R.drawable.p4_3};
 
         table_layout = (TableLayout) findViewById(R.id.TablaCarta);
         for (int i = 0; i<image.length; i++) {
@@ -33,4 +32,5 @@ public class ActivityCarta extends ActionBarActivity {
             table_layout.addView(row);
         }
     }
+
 }

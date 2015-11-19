@@ -5,36 +5,30 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
+public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnClickListener {
 
-public class activity_galeriafotos extends ActionBarActivity implements View.OnClickListener {
-
-    ImageButton tmp1;
-    ImageButton tmp2;
-    ImageButton tmp3;
-    ImageButton tmp4;
-    ImageButton tmp5;
-    ImageButton tmp6;
-    ImageButton tmp7;
-    ImageButton tmp8;
-    ImageButton tmp9;
-    ImageButton tmp10;
-    ImageButton tmp11;
-    ImageButton tmp12;
-    ImageView imagen;
-
-    ImageButton home;
-    ImageButton foto;
-    ImageButton carta;
-
-    int request;
-
+    private ImageButton tmp1;
+    private ImageButton tmp2;
+    private ImageButton tmp3;
+    private ImageButton tmp4;
+    private ImageButton tmp5;
+    private ImageButton tmp6;
+    private ImageButton tmp7;
+    private ImageButton tmp8;
+    private ImageButton tmp9;
+    private ImageButton tmp10;
+    private ImageButton tmp11;
+    private ImageButton tmp12;
+    private ImageView imagen;
+    private ImageButton home;
+    private ImageButton foto;
+    private ImageButton carta;
+    private int request;
 
 
     @Override
@@ -147,15 +141,15 @@ public class activity_galeriafotos extends ActionBarActivity implements View.OnC
                 imagen.setImageResource(R.drawable.foto3);
             break;
             case R.id.imageView2:
-                Intent intent1 = new Intent(activity_galeriafotos.this, MainActivity.class);
+                Intent intent1 = new Intent(ActivityGaleriaFotos.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
             case R.id.imageView3:
-                Intent intent2 = new Intent(activity_galeriafotos.this, activity_galeriafotos.class);
+                Intent intent2 = new Intent(ActivityGaleriaFotos.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent2, request);
                 break;
             case R.id.imageView4:
-                Intent intent3 = new Intent(activity_galeriafotos.this, ActivityPresentation.class);
+                Intent intent3 = new Intent(ActivityGaleriaFotos.this, ActivityPresentation.class);
                 startActivityForResult(intent3, request);
                 break;
         }

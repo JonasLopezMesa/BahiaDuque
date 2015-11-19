@@ -23,7 +23,7 @@
             android:name=".ActivityPresentation"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".activity_galeriafotos" />
+        <activity android:name=".ActivityGaleriaFotos" />
         <activity
             android:name=".ActivityCarta"
             android:label="@string/title_activity_scrolling"

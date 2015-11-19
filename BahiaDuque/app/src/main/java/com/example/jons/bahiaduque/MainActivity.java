@@ -21,21 +21,10 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this, activity_galeriafotos.class);
+                Intent intent = new Intent(MainActivity.this, ActivityGaleriaFotos.class);
                 startActivity(intent);
             }
         });
-        final ImageButton boton1 = (ImageButton)findViewById(R.id.imageButton1);
-        boton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this,ActivityCarta.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 
