@@ -1,19 +1,36 @@
 package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.ImageButton;
 
 
-public class ActivityPresentation extends ActionBarActivity {
+public class ActivityPresentation extends ActionBarActivity implements View.OnClickListener {
+
+
+    ImageButton home;
+    ImageButton foto;
+    ImageButton carta;
+
+    int request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentation);
+
+
+        home = (ImageButton) findViewById(R.id.imageView2);
+        home.setOnClickListener(this);
+        foto = (ImageButton) findViewById(R.id.imageView3);
+        foto.setOnClickListener(this);
+        carta = (ImageButton) findViewById(R.id.imageView4);
+        carta.setOnClickListener(this);
     }
 
 
@@ -48,7 +65,21 @@ public class ActivityPresentation extends ActionBarActivity {
     }
 
 
-
-
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.imageView2:
+                Intent intent1 = new Intent(ActivityPresentation.this, MainActivity.class);
+                startActivityForResult(intent1, request);
+                break;
+            case R.id.imageView3:
+                Intent intent2 = new Intent(ActivityPresentation.this, activity_galeriafotos.class);
+                startActivityForResult(intent2, request);
+                break;
+            case R.id.imageView4:
+                Intent intent3 = new Intent(ActivityPresentation.this, ActivityPresentation.class);
+                startActivityForResult(intent3, request);
+                break;
+        }
+    }
 }
