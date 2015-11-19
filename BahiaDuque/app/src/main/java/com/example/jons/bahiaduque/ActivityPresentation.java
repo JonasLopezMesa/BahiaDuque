@@ -2,10 +2,11 @@ package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.support.v7.app.ActionBarActivity;
+
 
 public class ActivityPresentation extends ActionBarActivity {
 
