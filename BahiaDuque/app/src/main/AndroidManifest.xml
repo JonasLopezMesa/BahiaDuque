@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jons.bahiaduque" >
+    package="com.example.jons.bahiaduque">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +22,12 @@
         <activity
             android:name=".ActivityPresentation"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".activity_galeriafotos" />
+        <activity
+            android:name=".ActivityCarta"
+            android:label="@string/title_activity_scrolling"
             android:screenOrientation="landscape" >
-        </activity>
-        <activity android:name=".activity_galeriafotos" >
         </activity>
     </application>
 

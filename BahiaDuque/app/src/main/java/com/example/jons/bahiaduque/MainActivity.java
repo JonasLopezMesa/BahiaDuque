@@ -7,7 +7,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends ActionBarActivity {
@@ -22,7 +21,17 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this,activity_galeriafotos.class);
+                Intent intent = new Intent(MainActivity.this, activity_galeriafotos.class);
+                startActivity(intent);
+            }
+        });
+        final ImageButton boton1 = (ImageButton)findViewById(R.id.imageButton1);
+        boton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(MainActivity.this,ActivityCarta.class);
                 startActivity(intent);
             }
         });
