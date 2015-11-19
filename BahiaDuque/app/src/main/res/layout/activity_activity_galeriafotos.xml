@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagen1"
-            android:background="@drawable/foto1"
+            android:src="@drawable/foto1"
             android:scaleType="fitXY"/>
     </LinearLayout>
 
