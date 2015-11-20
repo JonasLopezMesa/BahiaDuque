@@ -7,6 +7,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.jons.bahiaduque.ActivityPresentation"
     android:focusable="true">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dorado">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/home_boton"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:src="@drawable/galeria_botonn"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:src="@drawable/carta_boton"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
