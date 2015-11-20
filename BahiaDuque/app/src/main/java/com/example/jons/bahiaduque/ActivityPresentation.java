@@ -14,7 +14,6 @@ import android.widget.ImageButton;
 
 public class ActivityPresentation extends ActionBarActivity implements View.OnClickListener {
 
-
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
