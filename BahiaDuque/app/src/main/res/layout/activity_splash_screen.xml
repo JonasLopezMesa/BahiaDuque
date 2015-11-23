@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:orientation="vertical"
+    tools:context="com.example.jons.bahiaduque.SplashScreen">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout1"
+        android:background="@drawable/splashscreenpng">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:id="@+id/layout2">
+
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:id="@+id/imageView6"
+                android:src="@drawable/logosplash"
+                android:layout_marginLeft="440dp"
+                android:layout_marginTop="100dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:id="@+id/layout3"
+            android:background="@color/fondito"
+            android:layout_marginBottom="200dp">
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageButton14"
+                android:background="@drawable/misc_flags_spain"
+                android:layout_marginLeft="490dp" />
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageButton15"
+                android:background="@drawable/misc_flags_france"/>
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageButton16"
+                android:background="@drawable/misc_flags_germany"/>
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageButton17"
+                android:background="@drawable/misc_flags_italia"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

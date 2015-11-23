@@ -2,5 +2,6 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="dorado">#a7976a</color>
+    <color name="fondito">#80E2FCFC</color>
 
 </resources>
