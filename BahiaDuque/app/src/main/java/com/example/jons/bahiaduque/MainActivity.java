@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -16,6 +17,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private  ImageButton botonAguas;
     private  ImageButton botonAsia;
     private ImageButton idiomas;
+    private Button button;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         botonAguas = (ImageButton)findViewById(R.id.imageButton3);
         botonAsia = (ImageButton)findViewById(R.id.imageButton4);
         idiomas = (ImageButton)findViewById(R.id.imageButton5);
+        button = (Button)findViewById(R.id.button);
+        button2 = (Button)findViewById(R.id.button2);
 
         //Evento Click de los Botones de imagenes
         botonBrassrie.setOnClickListener(this);
@@ -34,6 +39,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         botonAguas.setOnClickListener(this);
         botonAsia.setOnClickListener(this);
         idiomas.setOnClickListener(this);
+        button.setOnClickListener(this);
+        button2.setOnClickListener(this);
 
 
     }
@@ -85,6 +92,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.imageButton5:
                 intent = new Intent(MainActivity.this, SplashScreen.class);
+                startActivity(intent);
+                break;
+            case R.id.button2:
+                intent = new Intent(MainActivity.this, ActivityPampano.class);
                 startActivity(intent);
                 break;
         }
