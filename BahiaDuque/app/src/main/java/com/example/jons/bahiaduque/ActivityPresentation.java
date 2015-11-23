@@ -76,10 +76,6 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
                 Intent intent2 = new Intent(ActivityPresentation.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent2, request);
                 break;
-            case R.id.imageView4:
-                Intent intent3 = new Intent(ActivityPresentation.this, ActivityPresentation.class);
-                startActivityForResult(intent3, request);
-                break;
             case R.id.buttonCarta:
                 Intent intent4 = new Intent(ActivityPresentation.this, ActivityCarta.class);
                 startActivityForResult(intent4, request);

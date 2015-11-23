@@ -63,7 +63,8 @@
             android:textColor="#FFFFFF"
             android:background="@drawable/boton"
             android:layout_marginLeft="15dp"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"/>
+
 
 
     </LinearLayout>

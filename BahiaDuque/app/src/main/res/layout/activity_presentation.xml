@@ -37,6 +37,15 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp" />
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:id="@+id/imageButton13"
+            android:src="@drawable/logoblanco"
+            android:layout_marginLeft="920dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="2dp" />
+
     </LinearLayout>
 
     <ImageView
