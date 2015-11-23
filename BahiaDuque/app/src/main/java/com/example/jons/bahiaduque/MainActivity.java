@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private  ImageButton botonTrattoria;
     private  ImageButton botonAguas;
     private  ImageButton botonAsia;
+    private ImageButton idiomas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +26,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         botonTrattoria = (ImageButton)findViewById(R.id.imageButton2);
         botonAguas = (ImageButton)findViewById(R.id.imageButton3);
         botonAsia = (ImageButton)findViewById(R.id.imageButton4);
+        idiomas = (ImageButton)findViewById(R.id.imageButton5);
 
         //Evento Click de los Botones de imagenes
         botonBrassrie.setOnClickListener(this);
         botonTrattoria.setOnClickListener(this);
         botonAguas.setOnClickListener(this);
         botonAsia.setOnClickListener(this);
+        idiomas.setOnClickListener(this);
 
 
     }
@@ -78,6 +82,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.imageButton4:
                 botonAsia.setImageResource(R.drawable.asia_transparency);
+                break;
+            case R.id.imageButton5:
+                intent = new Intent(MainActivity.this, SplashScreen.class);
+                startActivity(intent);
                 break;
         }
     }
