@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jons.bahiaduque.ActivityPresentation"
-    android:focusable="true">
+    android:focusable="true"
+    android:orientation="vertical">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -57,6 +58,7 @@
             </TableLayout>
 
     </ScrollView>
+
 
 
 </LinearLayout>
