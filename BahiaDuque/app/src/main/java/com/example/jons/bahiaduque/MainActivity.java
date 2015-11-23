@@ -5,28 +5,31 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
+    private  ImageButton botonBrassrie;
+    private  ImageButton botonTrattoria;
+    private  ImageButton botonAguas;
+    private  ImageButton botonAsia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final ImageButton boton = (ImageButton)findViewById(R.id.imageButton);
-        boton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent intent = new Intent(MainActivity.this, ActivityGaleriaFotos.class);
-                startActivity(intent);
-            }
-        });
+        botonBrassrie = (ImageButton)findViewById(R.id.imageButton);
+        botonTrattoria = (ImageButton)findViewById(R.id.imageButton2);
+        botonAguas = (ImageButton)findViewById(R.id.imageButton3);
+        botonAsia = (ImageButton)findViewById(R.id.imageButton4);
+
+        //Evento Click de los Botones de imagenes
+        botonBrassrie.setOnClickListener(this);
+        botonTrattoria.setOnClickListener(this);
+        botonAguas.setOnClickListener(this);
+        botonAsia.setOnClickListener(this);
 
 
     }
@@ -57,5 +60,25 @@ public class MainActivity extends ActionBarActivity {
     public void onResume() {
         super.onResume();
         hideVirtualButtons();
+    }
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.imageButton:
+                botonBrassrie.setImageResource(R.drawable.brasserie_transparency);
+                intent = new Intent(MainActivity.this, ActivityGaleriaFotos.class);
+                startActivity(intent);
+                break;
+            case R.id.imageButton2:
+                botonTrattoria.setImageResource(R.drawable.trattoria_transparency);
+                break;
+            case R.id.imageButton3:
+                botonAguas.setImageResource(R.drawable.aguas_transparency);
+                break;
+            case R.id.imageButton4:
+                botonAsia.setImageResource(R.drawable.asia_transparency);
+                break;
+        }
     }
 }
