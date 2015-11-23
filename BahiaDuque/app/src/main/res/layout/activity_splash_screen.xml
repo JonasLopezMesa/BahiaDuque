@@ -45,23 +45,23 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:id="@+id/imageButton14"
-                android:background="@drawable/misc_flags_spain"
+                android:background="@drawable/boton_idioma_spain"
                 android:layout_marginLeft="490dp" />
             <ImageButton
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:id="@+id/imageButton15"
-                android:background="@drawable/misc_flags_france"/>
+                android:background="@drawable/boton_idioma_france"/>
             <ImageButton
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:id="@+id/imageButton16"
-                android:background="@drawable/misc_flags_germany"/>
+                android:background="@drawable/boton_idioma_germany"/>
             <ImageButton
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:id="@+id/imageButton17"
-                android:background="@drawable/misc_flags_italia"/>
+                android:background="@drawable/boton_idioma_italia"/>
         </LinearLayout>
 
 

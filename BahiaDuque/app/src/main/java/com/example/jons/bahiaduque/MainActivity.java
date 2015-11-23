@@ -70,18 +70,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         Intent intent;
         switch (v.getId()){
             case R.id.imageButton:
-                botonBrassrie.setImageResource(R.drawable.brasserie_transparency);
+                botonBrassrie.setImageResource(R.drawable.boton_brasserie_transparency);
                 intent = new Intent(MainActivity.this, ActivityGaleriaFotos.class);
                 startActivity(intent);
                 break;
             case R.id.imageButton2:
-                botonTrattoria.setImageResource(R.drawable.trattoria_transparency);
+                botonTrattoria.setImageResource(R.drawable.boton_trattoria_transparency);
                 break;
             case R.id.imageButton3:
-                botonAguas.setImageResource(R.drawable.aguas_transparency);
+                botonAguas.setImageResource(R.drawable.boton_aguas_transparency);
                 break;
             case R.id.imageButton4:
-                botonAsia.setImageResource(R.drawable.asia_transparency);
+                botonAsia.setImageResource(R.drawable.boton_asia_transparency);
                 break;
             case R.id.imageButton5:
                 intent = new Intent(MainActivity.this, SplashScreen.class);

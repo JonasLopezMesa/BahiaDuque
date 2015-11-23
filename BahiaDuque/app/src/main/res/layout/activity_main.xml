@@ -26,7 +26,7 @@
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:id="@+id/imageView5"
-            android:src="@drawable/leadinghotels"
+            android:src="@drawable/logo_leadinghotels"
             android:layout_marginLeft="750dp" />
     </LinearLayout>
 
@@ -38,19 +38,20 @@
         android:background="@color/dorado">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/imageButton5"
-            android:src="@drawable/home_boton"
+            android:background="@drawable/boton_home_pulsado"
             android:layout_marginLeft="40dp"
-            android:layout_gravity="center_vertical" />
+            android:layout_gravity="center_vertical"
+            />
 
         <Button
             android:layout_width="130dp"
             android:layout_height="40dp"
             android:text="Restaurantes"
             android:id="@+id/button"
-            android:background="@drawable/boton"
+            android:background="@drawable/style_boton"
             android:layout_marginLeft="40dp"
             android:textColor="#ffffff"
             android:layout_gravity="center_vertical"/>
@@ -61,7 +62,7 @@
             android:text="Pámpano"
             android:id="@+id/button2"
             android:textColor="#FFFFFF"
-            android:background="@drawable/boton"
+            android:background="@drawable/style_boton"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical"/>
 
@@ -86,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/brasserie"
+                android:src="@drawable/boton_brasserie"
                 android:layout_marginRight="3dp" />
         </LinearLayout>
 
@@ -102,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton2"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/tratoria"/>
+                android:src="@drawable/boton_tratoria"/>
         </LinearLayout>
 
         <LinearLayout
@@ -117,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton3"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/aguas"
+                android:src="@drawable/boton_aguas"
                 android:layout_marginLeft="3dp" />
         </LinearLayout>
 
@@ -133,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton4"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/asia"
+                android:src="@drawable/boton_asia"
                 android:layout_marginLeft="3dp" />
         </LinearLayout>
     </LinearLayout>

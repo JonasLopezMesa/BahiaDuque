@@ -105,40 +105,40 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.imageButton1:
-                imagen.setImageResource(R.drawable.foto1);
+                imagen.setImageResource(R.drawable.galeria_brasserie1);
             break;
             case R.id.imageButton2:
-                imagen.setImageResource(R.drawable.foto2);
+                imagen.setImageResource(R.drawable.galeria_brasserie2);
             break;
             case R.id.imageButton3:
-                imagen.setImageResource(R.drawable.foto3);
+                imagen.setImageResource(R.drawable.galeria_brasserie3);
             break;
             case R.id.imageButton4:
-                imagen.setImageResource(R.drawable.foto1);
+                imagen.setImageResource(R.drawable.galeria_brasserie1);
             break;
             case R.id.imageButton5:
-                imagen.setImageResource(R.drawable.foto2);
+                imagen.setImageResource(R.drawable.galeria_brasserie2);
             break;
             case R.id.imageButton6:
-                imagen.setImageResource(R.drawable.foto3);
+                imagen.setImageResource(R.drawable.galeria_brasserie3);
             break;
             case R.id.imageButton7:
-                imagen.setImageResource(R.drawable.foto1);
+                imagen.setImageResource(R.drawable.galeria_brasserie1);
             break;
             case R.id.imageButton8:
-                imagen.setImageResource(R.drawable.foto2);
+                imagen.setImageResource(R.drawable.galeria_brasserie2);
             break;
             case R.id.imageButton9:
-                imagen.setImageResource(R.drawable.foto3);
+                imagen.setImageResource(R.drawable.galeria_brasserie3);
             break;
             case R.id.imageButton10:
-                imagen.setImageResource(R.drawable.foto1);
+                imagen.setImageResource(R.drawable.galeria_brasserie1);
             break;
             case R.id.imageButton11:
-                imagen.setImageResource(R.drawable.foto2);
+                imagen.setImageResource(R.drawable.galeria_brasserie2);
             break;
             case R.id.imageButton12:
-                imagen.setImageResource(R.drawable.foto3);
+                imagen.setImageResource(R.drawable.galeria_brasserie3);
             break;
             case R.id.imageView2:
                 Intent intent1 = new Intent(ActivityGaleriaFotos.this, MainActivity.class);

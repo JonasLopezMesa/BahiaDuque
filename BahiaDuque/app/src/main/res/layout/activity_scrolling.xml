@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
-            android:src="@drawable/home_boton"
+            android:background="@drawable/boton_home1"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical" />
 
@@ -26,17 +26,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView3"
-            android:src="@drawable/galeria_botonn"
+            android:background="@drawable/boton_galeria"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="10dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView4"
-            android:src="@drawable/carta_boton"
+            android:background="@drawable/boton_carta_pulsado"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="100dp"

@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView3"
-            android:background="@drawable/boton_galeria_pulsado"
+            android:background="@drawable/boton_galeria"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp" />
 

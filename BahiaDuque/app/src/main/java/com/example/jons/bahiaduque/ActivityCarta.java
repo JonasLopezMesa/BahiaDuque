@@ -36,8 +36,8 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
         carta.setOnClickListener(this);
 
         //Imagenes a Insertar
-        Integer[] image = { R.drawable.plato1, R.drawable.plato2, R.drawable.p2_1,R.drawable.p2_2,R.drawable.p2_3,R.drawable.p3_1,R.drawable.p3_2,R.drawable.p3_3,
-                R.drawable.p4_1,R.drawable.p4_2,R.drawable.p4_3};
+        Integer[] image = { R.drawable.plato1_brasserie, R.drawable.plato2_brasserie, R.drawable.plato3_brasserie,R.drawable.plato4_brasserie,R.drawable.plato5_brasserie,
+                R.drawable.plato6_brasserie,R.drawable.plato7_brasserie,R.drawable.plato8_brasserie, R.drawable.plato9__brasserie,R.drawable.plato10_brasserie,R.drawable.plato11_brasserie};
 
         table_layout = (TableLayout) findViewById(R.id.TablaCarta);
         for (int i = 0; i<image.length; i++) {

@@ -2,6 +2,7 @@ package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -12,7 +13,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class SplashScreen extends ActionBarActivity implements View.OnClickListener {
-
 
     private ImageButton spanish;
     private ImageButton france;
@@ -27,6 +27,7 @@ public class SplashScreen extends ActionBarActivity implements View.OnClickListe
 
         spanish = (ImageButton) findViewById(R.id.imageButton14);
         spanish.setOnClickListener(this);
+
 
         Toast toast = Toast.makeText(getApplicationContext(), "Selecciona un idioma",
                 Toast.LENGTH_LONG);
@@ -48,6 +49,9 @@ public class SplashScreen extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onResume() {
         super.onResume();
+        View backgroundimage = findViewById(R.id.imageButton14);
+        Drawable background = backgroundimage.getBackground();
+        background.setAlpha(255);
         hideVirtualButtons();
     }
 
@@ -68,6 +72,10 @@ public class SplashScreen extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.imageButton14:
+                spanish.setAlpha(80);
+                View backgroundimage = findViewById(R.id.imageButton14);
+                Drawable background = backgroundimage.getBackground();
+                background.setAlpha(128);
                 Intent intent1 = new Intent(SplashScreen.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
