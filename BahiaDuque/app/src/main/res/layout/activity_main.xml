@@ -21,6 +21,13 @@
             android:layout_height="match_parent"
             android:id="@+id/imageView"
             android:src="@drawable/logo_bahia"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView5"
+            android:src="@drawable/leadinghotels"
+            android:layout_marginLeft="750dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -58,7 +65,7 @@
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical">
 
-        </Button>
+
     </LinearLayout>
 
     <LinearLayout
