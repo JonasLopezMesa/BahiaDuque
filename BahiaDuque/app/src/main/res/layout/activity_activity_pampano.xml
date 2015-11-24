@@ -38,11 +38,11 @@
             android:layout_marginLeft="15dp" />
 
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="56dp"
             android:layout_height="56dp"
             android:id="@+id/imageButton13"
-            android:src="@drawable/logoblanco"
-            android:layout_marginLeft="920dp"
+            android:src="@drawable/logo_blanco_cuadrado"
+            android:layout_marginLeft="1000dp"
             android:scaleType="fitXY"
             android:layout_marginTop="2dp" />
 
@@ -53,7 +53,8 @@
         android:layout_width="400dp"
         android:layout_height="620dp"
         android:layout_marginTop="60dp"
-
+        android:background="@drawable/foto_mapa_fondo"
+        android:scaleType="fitXY"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/foto"
@@ -63,145 +64,181 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagen1"
-            android:src="@drawable/galeria_pampano3"
-            android:scaleType="fitXY"/>
+            android:src="@drawable/galeria_pampano_3"
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginRight="1000dp"
-        android:id="@+id/restaurante"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imagen2"
-            android:background="@drawable/logo_pampano"
-            android:layout_gravity="center"
-            android:layout_marginLeft="38dp" />
-    </LinearLayout>
-
-
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="280dp"
-        android:id="@+id/horizontalScrollView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginTop="690dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:id="@+id/restaurante"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:id="@+id/imageButton1"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano1"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton2"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano2"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton3"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano3"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton4"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano1"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton5"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano2"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton6"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano3"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton7"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano1"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton8"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano2"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton9"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano3"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton10"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano1"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton11"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano2"
-                android:layout_marginLeft="5dp" />
-            <ImageButton
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageButton12"
-                android:layout_below="@+id/foto"
-                android:layout_alignStart="@+id/horizontalScrollView"
-                android:background="@drawable/galeria_pampano3"
-                android:layout_marginLeft="5dp" />
+                android:id="@+id/imagen2"
+                android:background="@drawable/logo_pampano"
+                android:layout_gravity="center"
+                android:layout_marginLeft="38dp" />
         </LinearLayout>
 
+        <HorizontalScrollView
+            android:layout_width="880dp"
+            android:layout_height="100dp"
+            android:id="@+id/horizontalScrollView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp">
 
-    </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/layoutscroll">
+
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton1"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_3"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton2"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_4"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton3"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_5"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton4"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_6"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton5"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_7"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton6"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_8"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton7"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_9"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton8"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_10"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton9"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_11"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton10"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_12"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton11"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_13"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton12"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_14"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton14"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_15"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton15"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_16"
+                    android:layout_marginLeft="5dp" />
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton16"
+                    android:layout_below="@+id/foto"
+                    android:layout_alignStart="@+id/horizontalScrollView"
+                    android:background="@drawable/galeria_pampano_17"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/boton_derecha"
+            android:background="@drawable/boton_derecha"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
