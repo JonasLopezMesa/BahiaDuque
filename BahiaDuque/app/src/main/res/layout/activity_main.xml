@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="0"
-        android:background="@color/dorado">
+        android:background="@drawable/style_baner_background">
 
         <ImageButton
             android:layout_width="40dp"

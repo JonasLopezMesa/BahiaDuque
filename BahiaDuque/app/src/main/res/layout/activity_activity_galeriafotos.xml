@@ -11,7 +11,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/dorado">
+        android:background="@drawable/style_baner_background">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -57,14 +57,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/foto"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="0dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagen1"
             android:src="@drawable/galeria_brasserie1"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +75,7 @@
         android:id="@+id/restaurante"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
 
         <ImageView
             android:layout_width="200dp"
