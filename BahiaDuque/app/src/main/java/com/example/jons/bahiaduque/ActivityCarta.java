@@ -109,34 +109,36 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
 
     public boolean onGenericMotionEvent(MotionEvent event) {
         if (event.isFromSource(InputDevice.SOURCE_CLASS_POINTER)) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_HOVER_MOVE:
-                    Log.i("MyActivity", "Entró");
-                    if(sv.getScrollY() < 2000){
-                        entrantes.setBackgroundResource(R.drawable.style_boton_pulsado);
-                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
-                        especialidades.setBackgroundResource(R.drawable.style_boton);
-                        postres.setBackgroundResource(R.drawable.style_boton);
-                    }
-                    if((sv.getScrollY() >= 2000) && (sv.getScrollY() < 3398)){
-                        entrantes.setBackgroundResource(R.drawable.style_boton);
-                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton_pulsado);
-                        especialidades.setBackgroundResource(R.drawable.style_boton);
-                        postres.setBackgroundResource(R.drawable.style_boton);
-                    }
-                    if((sv.getScrollY() >= 3398) && (sv.getScrollY() < 4198)){
-                        entrantes.setBackgroundResource(R.drawable.style_boton);
-                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
-                        especialidades.setBackgroundResource(R.drawable.style_boton_pulsado);
-                        postres.setBackgroundResource(R.drawable.style_boton);
-                    }
-                    if(sv.getScrollY() >= 4198){
-                        entrantes.setBackgroundResource(R.drawable.style_boton);
-                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
-                        especialidades.setBackgroundResource(R.drawable.style_boton);
-                        postres.setBackgroundResource(R.drawable.style_boton_pulsado);
-                    }
-                    return true;
+            if((event.getAction() == MotionEvent.ACTION_UP) && (event.getAction() == MotionEvent.ACTION_UP)){
+                //para hacer zoom?
+            }
+            if (event.getAction() == MotionEvent.ACTION_HOVER_MOVE) {
+                Log.i("MyActivity", "Entró");
+                if (sv.getScrollY() < 2000) {
+                    entrantes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                    pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                    especialidades.setBackgroundResource(R.drawable.style_boton);
+                    postres.setBackgroundResource(R.drawable.style_boton);
+                }
+                if ((sv.getScrollY() >= 2000) && (sv.getScrollY() < 3398)) {
+                    entrantes.setBackgroundResource(R.drawable.style_boton);
+                    pescados_y_carnes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                    especialidades.setBackgroundResource(R.drawable.style_boton);
+                    postres.setBackgroundResource(R.drawable.style_boton);
+                }
+                if ((sv.getScrollY() >= 3398) && (sv.getScrollY() < 4198)) {
+                    entrantes.setBackgroundResource(R.drawable.style_boton);
+                    pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                    especialidades.setBackgroundResource(R.drawable.style_boton_pulsado);
+                    postres.setBackgroundResource(R.drawable.style_boton);
+                }
+                if (sv.getScrollY() >= 4198) {
+                    entrantes.setBackgroundResource(R.drawable.style_boton);
+                    pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                    especialidades.setBackgroundResource(R.drawable.style_boton);
+                    postres.setBackgroundResource(R.drawable.style_boton_pulsado);
+                }
+                return true;
             }
         }
         return super.onGenericMotionEvent(event);

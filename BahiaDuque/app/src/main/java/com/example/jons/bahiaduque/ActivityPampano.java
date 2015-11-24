@@ -6,6 +6,8 @@ import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.InputDevice;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
@@ -93,6 +95,7 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
         desplazar = (ImageButton) findViewById(R.id.boton_derecha);
         desplazar.setOnClickListener(this);
         sv = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
+
         ly = (LinearLayout) findViewById(R.id.layoutscroll);
 
 
@@ -126,6 +129,22 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+    }
+
+    //Mal hecho
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        if (event.isFromSource(InputDevice.SOURCE_CLASS_POINTER)) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_HOVER_MOVE:
+                    Log.i("ACTIVIDAD", String.valueOf(sv.getMaxScrollAmount()));
+                    Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
+                    if(sv.getMaxScrollAmount()==sv.getScrollX()){
+                        desplazar.setBackgroundResource(R.drawable.boton_izquierda);
+                    }
+                    return true;
+            }
+        }
+        return super.onGenericMotionEvent(event);
     }
 
     @Override
@@ -181,8 +200,6 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
                 startActivityForResult(intent1, request);
                 break;
             case R.id.boton_derecha:
-                Log.i("MyActivity", String.valueOf(sv.getScrollX()));
-                Log.i("MyActivity", String.valueOf(ly.getChildCount()*205));
                 if ((des >= ly.getChildCount()*205)){
                     des=0;
                     desplazar.setBackgroundResource(R.drawable.boton_derecha);
