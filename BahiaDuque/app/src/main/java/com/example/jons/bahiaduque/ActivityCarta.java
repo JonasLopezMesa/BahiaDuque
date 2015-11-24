@@ -5,11 +5,16 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.InputDevice;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
@@ -24,6 +29,13 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
     private Button buttonCarta;
     private int request;
 
+    private Button entrantes;
+    private Button pescados_y_carnes;
+    private Button especialidades;
+    private Button postres;
+
+    private ScrollView sv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +46,20 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
         foto.setOnClickListener(this);
         carta = (ImageButton) findViewById(R.id.imageView4);
         carta.setOnClickListener(this);
+
+        entrantes = (Button) findViewById(R.id.entrantes);
+        entrantes.setOnClickListener(this);
+        pescados_y_carnes = (Button) findViewById(R.id.pescados_y_carnes);
+        pescados_y_carnes.setOnClickListener(this);
+        especialidades = (Button) findViewById(R.id.especialidades);
+        especialidades.setOnClickListener(this);
+        postres = (Button) findViewById(R.id.postres);
+        postres.setOnClickListener(this);
+
+
+
+        sv = (ScrollView) findViewById(R.id.scrollvertical);
+
 
         //Imagenes a Insertar
         Integer[] image = { R.drawable.plato1_brasserie, R.drawable.plato2_brasserie, R.drawable.plato3_brasserie,R.drawable.plato4_brasserie,R.drawable.plato5_brasserie,
@@ -81,6 +107,41 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
         hideVirtualButtons();
     }
 
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        if (event.isFromSource(InputDevice.SOURCE_CLASS_POINTER)) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_HOVER_MOVE:
+                    Log.i("MyActivity", "Entró");
+                    if(sv.getScrollY() < 2000){
+                        entrantes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                        especialidades.setBackgroundResource(R.drawable.style_boton);
+                        postres.setBackgroundResource(R.drawable.style_boton);
+                    }
+                    if((sv.getScrollY() >= 2000) && (sv.getScrollY() < 3398)){
+                        entrantes.setBackgroundResource(R.drawable.style_boton);
+                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                        especialidades.setBackgroundResource(R.drawable.style_boton);
+                        postres.setBackgroundResource(R.drawable.style_boton);
+                    }
+                    if((sv.getScrollY() >= 3398) && (sv.getScrollY() < 4198)){
+                        entrantes.setBackgroundResource(R.drawable.style_boton);
+                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                        especialidades.setBackgroundResource(R.drawable.style_boton_pulsado);
+                        postres.setBackgroundResource(R.drawable.style_boton);
+                    }
+                    if(sv.getScrollY() >= 4198){
+                        entrantes.setBackgroundResource(R.drawable.style_boton);
+                        pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                        especialidades.setBackgroundResource(R.drawable.style_boton);
+                        postres.setBackgroundResource(R.drawable.style_boton_pulsado);
+                    }
+                    return true;
+            }
+        }
+        return super.onGenericMotionEvent(event);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -95,6 +156,34 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
             case R.id.imageView4:
                 Intent intent3 = new Intent(ActivityCarta.this, ActivityPresentation.class);
                 startActivityForResult(intent3, request);
+                break;
+            case R.id.entrantes:
+                sv.smoothScrollTo(0, 0);
+                entrantes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                especialidades.setBackgroundResource(R.drawable.style_boton);
+                postres.setBackgroundResource(R.drawable.style_boton);
+                break;
+            case R.id.pescados_y_carnes:
+                sv.smoothScrollTo(0, 2000);
+                entrantes.setBackgroundResource(R.drawable.style_boton);
+                pescados_y_carnes.setBackgroundResource(R.drawable.style_boton_pulsado);
+                especialidades.setBackgroundResource(R.drawable.style_boton);
+                postres.setBackgroundResource(R.drawable.style_boton);
+                break;
+            case R.id.especialidades:
+                sv.smoothScrollTo(0, 3398);
+                entrantes.setBackgroundResource(R.drawable.style_boton);
+                pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                especialidades.setBackgroundResource(R.drawable.style_boton_pulsado);
+                postres.setBackgroundResource(R.drawable.style_boton);
+                break;
+            case R.id.postres:
+                sv.smoothScrollTo(0, 4198);
+                entrantes.setBackgroundResource(R.drawable.style_boton);
+                pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);
+                especialidades.setBackgroundResource(R.drawable.style_boton);
+                postres.setBackgroundResource(R.drawable.style_boton_pulsado);
                 break;
         }
     }

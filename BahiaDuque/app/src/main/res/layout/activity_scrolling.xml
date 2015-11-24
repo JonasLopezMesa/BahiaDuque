@@ -49,25 +49,71 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:fillViewport="false">
+        android:layout_height="match_parent">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="692dp"
-                android:shrinkColumns="*"
-                android:orientation="vertical"
-                android:id="@+id/TablaCarta"
-                android:stretchColumns="*">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
 
-            </TableLayout>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Entrantes"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/style_boton_pulsado"
+                android:id="@+id/entrantes"
+                android:layout_marginLeft="240dp" />
 
-    </ScrollView>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Pescados y Carnes"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/style_boton"
+                android:id="@+id/pescados_y_carnes" />
 
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Especialidades"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/style_boton"
+                android:id="@+id/especialidades" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Postres"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/style_boton"
+                android:id="@+id/postres" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollvertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="false">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="692dp"
+                    android:shrinkColumns="*"
+                    android:orientation="vertical"
+                    android:id="@+id/TablaCarta"
+                    android:stretchColumns="*">
+
+                </TableLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </LinearLayout>
