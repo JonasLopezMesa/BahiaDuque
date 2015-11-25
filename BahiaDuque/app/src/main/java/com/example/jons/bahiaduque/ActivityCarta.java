@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -37,6 +38,7 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
     private Button postres;
 
     private ScrollView sv;
+    private HorizontalScrollView svhorizontal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,8 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
 
         table_layout = new TableLayout(this);
         zoomView = new ZoomView(this);
+        svhorizontal = new HorizontalScrollView(this);
+
 
         //Imagenes a Insertar
         Integer[] image = { R.drawable.plato1_brasserie, R.drawable.plato2_brasserie, R.drawable.plato3_brasserie,R.drawable.plato4_brasserie,R.drawable.plato5_brasserie,
@@ -75,10 +79,11 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
             plato.setImageResource(image[i]);
             plato.setLayoutParams(layoutParams);
             row.addView(plato);
-            table_layout.addView(row);
 
+            table_layout.addView(row);
         }
-        zoomView.addView(table_layout);
+        svhorizontal.addView(table_layout);
+        zoomView.addView(svhorizontal);
         sv.addView(zoomView);
     }
     @Override
