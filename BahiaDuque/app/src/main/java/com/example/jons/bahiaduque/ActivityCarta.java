@@ -1,34 +1,36 @@
 package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.InputDevice;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
 
+import pl.polidea.view.ZoomView;
+
 
 public class ActivityCarta extends ActionBarActivity implements View.OnClickListener {
     private TableLayout table_layout;
-
+    private ZoomView zoomView;
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
-    private Button buttonCarta;
     private int request;
-
     private Button entrantes;
     private Button pescados_y_carnes;
     private Button especialidades;
@@ -40,13 +42,13 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
+
         home = (ImageButton) findViewById(R.id.imageView2);
         home.setOnClickListener(this);
         foto = (ImageButton) findViewById(R.id.imageView3);
         foto.setOnClickListener(this);
         carta = (ImageButton) findViewById(R.id.imageView4);
         carta.setOnClickListener(this);
-
         entrantes = (Button) findViewById(R.id.entrantes);
         entrantes.setOnClickListener(this);
         pescados_y_carnes = (Button) findViewById(R.id.pescados_y_carnes);
@@ -55,17 +57,15 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
         especialidades.setOnClickListener(this);
         postres = (Button) findViewById(R.id.postres);
         postres.setOnClickListener(this);
-
-
-
         sv = (ScrollView) findViewById(R.id.scrollvertical);
 
+        table_layout = new TableLayout(this);
+        zoomView = new ZoomView(this);
 
         //Imagenes a Insertar
         Integer[] image = { R.drawable.plato1_brasserie, R.drawable.plato2_brasserie, R.drawable.plato3_brasserie,R.drawable.plato4_brasserie,R.drawable.plato5_brasserie,
                 R.drawable.plato6_brasserie,R.drawable.plato7_brasserie,R.drawable.plato8_brasserie, R.drawable.plato9__brasserie,R.drawable.plato10_brasserie,R.drawable.plato11_brasserie};
 
-        table_layout = (TableLayout) findViewById(R.id.TablaCarta);
         for (int i = 0; i<image.length; i++) {
             TableRow row = new TableRow(this);
             row.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
@@ -76,9 +76,11 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
             plato.setLayoutParams(layoutParams);
             row.addView(plato);
             table_layout.addView(row);
-        }
-    }
 
+        }
+        zoomView.addView(table_layout);
+        sv.addView(zoomView);
+    }
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -113,7 +115,6 @@ public class ActivityCarta extends ActionBarActivity implements View.OnClickList
                 //para hacer zoom?
             }
             if (event.getAction() == MotionEvent.ACTION_HOVER_MOVE) {
-                Log.i("MyActivity", "Entró");
                 if (sv.getScrollY() < 2000) {
                     entrantes.setBackgroundResource(R.drawable.style_boton_pulsado);
                     pescados_y_carnes.setBackgroundResource(R.drawable.style_boton);

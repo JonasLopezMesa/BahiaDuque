@@ -10,6 +10,7 @@
     android:orientation="vertical">
     <LinearLayout
         android:orientation="horizontal"
+        android:id= "@+id/Layout1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/style_baner_background">
@@ -100,16 +101,6 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:fillViewport="false">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="692dp"
-                    android:shrinkColumns="*"
-                    android:orientation="vertical"
-                    android:id="@+id/TablaCarta"
-                    android:stretchColumns="*">
-
-                </TableLayout>
 
         </ScrollView>
 
