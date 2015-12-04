@@ -16,13 +16,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.ACTIVITY" />
@@ -30,16 +24,25 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ActivityPresentation"
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityPresentation"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".ActivityGaleriaFotos" />
-        <activity
-            android:name=".ActivityCarta"
+        <activity  android:name=".ActivityCarta"
             android:label="@string/title_activity_scrolling"
             android:screenOrientation="landscape" />
-        <activity android:name=".ActivityPampano"></activity>
+        <activity android:name=".ActivityPampano" />
+        <activity android:name=".ActivityYate"
+            android:screenOrientation="landscape">
+
+        </activity>
     </application>
 
 </manifest>
