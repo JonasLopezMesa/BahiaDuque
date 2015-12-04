@@ -81,7 +81,7 @@
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="657dp"
+                    android:layout_width="match_parent"
                     android:layout_height="433dp"
                     android:layout_gravity="left|center_vertical"
                     android:background="@color/fondito"
@@ -91,31 +91,20 @@
                     android:id="@+id/contenedorDescripcion">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="439dp"
                         android:layout_height="match_parent"
                         android:id="@+id/imageDescripcion"
                         android:src="@drawable/foto_descripcion_yate"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginRight="10dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/fondito"
-                    android:layout_gravity="right|center_vertical"
-                    android:padding="10dp"
-                    android:weightSum="1"
-                    android:id="@+id/contenedorMedidas">
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1" />
 
                     <ImageView
                         android:layout_width="335dp"
                         android:layout_height="418dp"
                         android:id="@+id/imageMedidas"
                         android:background="@drawable/foto_yate_medidas"
-                        android:layout_gravity="right|center_vertical"
                         android:layout_marginLeft="15dp"
                         android:longClickable="false" />
                 </LinearLayout>
