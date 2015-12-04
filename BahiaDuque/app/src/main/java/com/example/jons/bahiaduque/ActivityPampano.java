@@ -134,14 +134,13 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
     //Mal hecho
     public boolean onGenericMotionEvent(MotionEvent event) {
         if (event.isFromSource(InputDevice.SOURCE_CLASS_POINTER)) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_HOVER_MOVE:
-                    Log.i("ACTIVIDAD", String.valueOf(sv.getMaxScrollAmount()));
-                    Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
-                    if(sv.getMaxScrollAmount()==sv.getScrollX()){
-                        desplazar.setBackgroundResource(R.drawable.boton_izquierda);
-                    }
-                    return true;
+            if (event.getAction() == MotionEvent.ACTION_HOVER_MOVE) {
+                Log.i("ACTIVIDAD", String.valueOf(ly.getChildCount()*205));
+                Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
+                if (sv.getScrollX() >= 2140 ) {
+                    desplazar.setBackgroundResource(R.drawable.boton_izquierda2);
+                }
+                return true;
             }
         }
         return super.onGenericMotionEvent(event);
@@ -200,17 +199,17 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
                 startActivityForResult(intent1, request);
                 break;
             case R.id.boton_derecha:
+                Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
                 if ((des >= ly.getChildCount()*205)){
                     des=0;
-                    desplazar.setBackgroundResource(R.drawable.boton_derecha);
+                    desplazar.setBackgroundResource(R.drawable.boton_derecha2);
                 }
                 sv.smoothScrollTo(des, 0);
                 des=des+820;
                 if (des >= ly.getChildCount()*205){
-                    desplazar.setBackgroundResource(R.drawable.boton_izquierda);
+                    desplazar.setBackgroundResource(R.drawable.boton_izquierda2);
                 }
                 break;
-
         }
     }
 }
