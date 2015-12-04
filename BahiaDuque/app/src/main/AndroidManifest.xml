@@ -39,7 +39,8 @@
             android:name=".ActivityCarta"
             android:label="@string/title_activity_scrolling"
             android:screenOrientation="landscape" />
-        <activity android:name=".ActivityPampano"></activity>
+        <activity android:name=".ActivityPampano" />
+        <activity android:name=".ActivityMapa"></activity>
     </application>
 
 </manifest>
