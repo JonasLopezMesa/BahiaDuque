@@ -90,7 +90,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="494dp"
+                    android:layout_height="488dp"
                     android:layout_gravity="left|center_vertical"
                     android:background="@color/fondito"
                     android:padding="11dp"
