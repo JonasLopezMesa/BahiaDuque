@@ -3,8 +3,8 @@ package com.example.jons.bahiaduque;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.MotionEvent;
@@ -14,10 +14,12 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 public class ActivityPampano extends ActionBarActivity implements View.OnClickListener {
-
+    private ImageButton home;
+    private ImageButton galeria;
+    private ImageButton barco;
+    private ImageButton mapa;
     private ImageButton tmp1;
     private ImageButton tmp2;
     private ImageButton tmp3;
@@ -34,9 +36,6 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
     private ImageButton tmp14;
     private ImageButton tmp15;
     private ImageView imagen;
-    private ImageButton home;
-    private ImageButton foto;
-    private ImageButton carta;
     private ImageButton desplazar;
     private int request;
 
@@ -51,6 +50,21 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_pampano);
         hideVirtualButtons();
+
+        //Botones baner
+        home = (ImageButton) findViewById(R.id.homeBoton);
+        home.setOnClickListener(this);
+
+        galeria = (ImageButton) findViewById(R.id.galeriaBoton);
+        galeria.setOnClickListener(this);
+
+        barco = (ImageButton) findViewById(R.id.barcoBoton);
+        barco.setOnClickListener(this);
+
+        mapa = (ImageButton) findViewById(R.id.mapaBoton);
+        mapa.setOnClickListener(this);
+
+        //Botones galería
 
         tmp1 = (ImageButton) findViewById(R.id.imageButton1);
         tmp1.setOnClickListener(this);
@@ -84,13 +98,6 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
         tmp15.setOnClickListener(this);
 
         imagen = (ImageView) findViewById(R.id.imagen1);
-
-        home = (ImageButton) findViewById(R.id.imageView2);
-        home.setOnClickListener(this);
-        foto = (ImageButton) findViewById(R.id.imageView3);
-        foto.setOnClickListener(this);
-        carta = (ImageButton) findViewById(R.id.imageView4);
-        carta.setOnClickListener(this);
 
         desplazar = (ImageButton) findViewById(R.id.boton_derecha);
         desplazar.setOnClickListener(this);
@@ -149,6 +156,28 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
+            //Botones baner
+
+            case R.id.homeBoton:
+                Intent intent1 = new Intent(ActivityPampano.this, MainActivity.class);
+                startActivityForResult(intent1, request);
+                break;
+            case R.id.galeriaBoton:
+                Intent intent2 = new Intent(ActivityPampano.this, ActivityPampano.class);
+                startActivityForResult(intent2, request);
+                break;
+            case R.id.barcoBoton:
+                Intent intent4 = new Intent(ActivityPampano.this, ActivityYate.class);
+                startActivityForResult(intent4, request);
+                break;
+            case R.id.mapaBoton:
+                Intent intent5 = new Intent(ActivityPampano.this, ActivityMapa.class);
+                startActivityForResult(intent5, request);
+                break;
+            //Botones galería
+
+
             case R.id.imageButton1:
                 imagen.setImageResource(R.drawable.galeria_pampano_3);
                 break;
@@ -193,10 +222,6 @@ public class ActivityPampano extends ActionBarActivity implements View.OnClickLi
                 break;
             case R.id.imageButton16:
                 imagen.setImageResource(R.drawable.galeria_pampano_17);
-                break;
-            case R.id.imageView2:
-                Intent intent1 = new Intent(ActivityPampano.this, MainActivity.class);
-                startActivityForResult(intent1, request);
                 break;
             case R.id.boton_derecha:
                 Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));

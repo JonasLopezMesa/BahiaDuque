@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jons.bahiaduque.ActivityPresentation"
+    android:focusable="true"
+    android:background="@drawable/foto_pampano_background">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/style_baner_pampano">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeBoton"
+            android:background="@drawable/boton_home1"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/galeriaBoton"
+            android:background="@drawable/boton_galeria"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barcoBoton"
+            android:background="@drawable/boton_barco"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mapaBoton"
+            android:background="@drawable/boton_mapa"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton13"
+            android:src="@drawable/logo_pampano_modificado"
+            android:layout_marginLeft="850dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

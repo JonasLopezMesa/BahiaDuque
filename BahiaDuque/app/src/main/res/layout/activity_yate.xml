@@ -20,15 +20,12 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@drawable/style_baner_background"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/linearLayout2">
+            android:background="@drawable/style_baner_pampano">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
+                android:id="@+id/homeBoton"
                 android:background="@drawable/boton_home1"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center_vertical" />
@@ -36,7 +33,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView3"
+                android:id="@+id/galeriaBoton"
                 android:background="@drawable/boton_galeria"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp" />
@@ -44,19 +41,29 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
-                android:background="@drawable/boton_carta"
+                android:id="@+id/barcoBoton"
+                android:background="@drawable/boton_barco"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="15dp" />
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mapaBoton"
+                android:background="@drawable/boton_mapa"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
             <ImageView
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/imageButton13"
-                android:src="@drawable/logo_blanco_cuadrado"
-                android:layout_marginLeft="1000dp"
+                android:src="@drawable/logo_pampano_modificado"
+                android:layout_marginLeft="850dp"
                 android:scaleType="fitXY"
-                android:layout_marginTop="2dp" />
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="15dp" />
 
         </LinearLayout>
 

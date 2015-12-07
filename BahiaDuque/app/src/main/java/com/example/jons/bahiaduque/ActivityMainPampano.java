@@ -9,7 +9,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-public class ActivityMapa extends ActionBarActivity implements View.OnClickListener{
+public class ActivityMainPampano extends ActionBarActivity implements View.OnClickListener {
+
 
     private ImageButton home;
     private ImageButton galeria;
@@ -20,8 +21,7 @@ public class ActivityMapa extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_mapa);
-        hideVirtualButtons();
+        setContentView(R.layout.activity_activity_main_pampano);
 
         home = (ImageButton) findViewById(R.id.homeBoton);
         home.setOnClickListener(this);
@@ -38,21 +38,21 @@ public class ActivityMapa extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
+        switch (v.getId()){
             case R.id.homeBoton:
-                Intent intent1 = new Intent(ActivityMapa.this, MainActivity.class);
+                Intent intent1 = new Intent(ActivityMainPampano.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
             case R.id.galeriaBoton:
-                Intent intent2 = new Intent(ActivityMapa.this, ActivityPampano.class);
+                Intent intent2 = new Intent(ActivityMainPampano.this, ActivityPampano.class);
                 startActivityForResult(intent2, request);
                 break;
             case R.id.barcoBoton:
-                Intent intent4 = new Intent(ActivityMapa.this, ActivityYate.class);
+                Intent intent4 = new Intent(ActivityMainPampano.this, ActivityYate.class);
                 startActivityForResult(intent4, request);
                 break;
             case R.id.mapaBoton:
-                Intent intent5 = new Intent(ActivityMapa.this, ActivityMapa.class);
+                Intent intent5 = new Intent(ActivityMainPampano.this, ActivityMapa.class);
                 startActivityForResult(intent5, request);
                 break;
         }
@@ -68,13 +68,6 @@ public class ActivityMapa extends ActionBarActivity implements View.OnClickListe
             }
         }
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        hideVirtualButtons();
-    }
-
     @TargetApi(19)
     public void hideVirtualButtons() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

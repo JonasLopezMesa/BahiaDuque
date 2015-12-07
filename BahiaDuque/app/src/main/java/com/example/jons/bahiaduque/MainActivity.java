@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.button2:
-                intent = new Intent(MainActivity.this, ActivityPampano.class);
+                intent = new Intent(MainActivity.this, ActivityMainPampano.class);
                 startActivity(intent);
                 break;
         }
