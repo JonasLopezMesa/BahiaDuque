@@ -110,33 +110,34 @@
 
             </FrameLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
+        </LinearLayout>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/boton_snorkel"
-                    android:background="@drawable/boton_snorkel"
-                    android:layout_marginLeft="650dp"
-                    android:scaleType="fitXY"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/boton_capitan"
-                    android:background="@drawable/boton_capitan"
-                    android:scaleType="fitXY"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/boton_snorkel"
+                android:background="@drawable/boton_snorkel"
+                android:layout_marginLeft="650dp"
+                android:scaleType="fitXY"/>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/boton_comida"
-                    android:background="@drawable/boton_comida"
-                    android:scaleType="fitXY"/>
-            </LinearLayout>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/boton_capitan"
+                android:background="@drawable/boton_capitan"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/boton_comida"
+                android:background="@drawable/boton_comida"
+                android:scaleType="fitXY"/>
         </LinearLayout>
 
     </LinearLayout>
