@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/homeBoton"
-            android:background="@drawable/boton_home1"
+            android:background="@drawable/boton_home_pampano1"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical" />
 
