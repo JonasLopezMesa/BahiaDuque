@@ -122,7 +122,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/boton_snorkel"
                 android:background="@drawable/boton_snorkel"
-                android:layout_marginLeft="650dp"
+                android:layout_marginLeft="780dp"
                 android:scaleType="fitXY"/>
 
             <ImageButton
