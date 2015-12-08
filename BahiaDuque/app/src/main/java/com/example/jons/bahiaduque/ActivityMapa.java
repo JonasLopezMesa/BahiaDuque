@@ -15,6 +15,7 @@ public class ActivityMapa extends ActionBarActivity implements View.OnClickListe
     private ImageButton galeria;
     private ImageButton barco;
     private ImageButton mapa;
+    private ImageButton boton_snorkel;
     private int request;
 
     @Override
@@ -34,6 +35,9 @@ public class ActivityMapa extends ActionBarActivity implements View.OnClickListe
 
         mapa = (ImageButton) findViewById(R.id.mapaBoton);
         mapa.setOnClickListener(this);
+
+        boton_snorkel = (ImageButton) findViewById(R.id.boton_snorkel);
+        boton_snorkel.setOnClickListener(this);
     }
 
     @Override

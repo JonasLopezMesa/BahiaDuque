@@ -70,7 +70,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="1036dp"
-            android:layout_height="match_parent"
+            android:layout_height="500dp"
             android:id="@+id/linearLayout"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -109,6 +109,34 @@
                 </LinearLayout>
 
             </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton_snorkel"
+                    android:background="@drawable/boton_snorkel"
+                    android:layout_marginLeft="650dp"
+                    android:scaleType="fitXY"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton_capitan"
+                    android:background="@drawable/boton_capitan"
+                    android:scaleType="fitXY"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton_comida"
+                    android:background="@drawable/boton_comida"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
