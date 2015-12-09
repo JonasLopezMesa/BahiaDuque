@@ -28,7 +28,7 @@
                 android:layout_width="400dp"
                 android:layout_height="200dp"
                 android:id="@+id/imageView6"
-                android:src="@drawable/logosplash"
+                android:src="@drawable/logosplash1"
                 android:layout_marginLeft="440dp"
                 android:layout_marginTop="100dp" />
         </LinearLayout>
