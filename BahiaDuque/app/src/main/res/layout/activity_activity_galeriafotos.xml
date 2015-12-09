@@ -48,7 +48,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="400dp"
         android:layout_height="620dp"
@@ -65,7 +65,8 @@
             android:id="@+id/imagen1"
             android:src="@drawable/galeria_brasserie1"
             android:scaleType="fitXY" />
-    </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -89,18 +90,20 @@
 
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
+        android:layout_width="1100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="280dp"
         android:id="@+id/horizontalScrollView"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="75dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/Layoutgaleria">
 
             <ImageButton
                 android:layout_width="200dp"
@@ -202,6 +205,17 @@
 
 
     </HorizontalScrollView>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="110dp"
+        android:id="@+id/boton_derecha"
+        android:background="@drawable/boton_derecha2"
+        android:scaleType="fitXY"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/horizontalScrollView"
+        android:layout_alignBottom="@+id/horizontalScrollView"
+        android:layout_marginRight="10dp" />
 
 
 </RelativeLayout>

@@ -5,10 +5,15 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.InputDevice;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnClickListener {
 
@@ -28,8 +33,12 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
+    private ImageButton desplazar;
     private int request;
+    private HorizontalScrollView sv;
+    private LinearLayout ly;
 
+    private int des = 820;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +78,12 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
         carta = (ImageButton) findViewById(R.id.imageView4);
         carta.setOnClickListener(this);
 
+        desplazar = (ImageButton) findViewById(R.id.boton_derecha);
+        desplazar.setOnClickListener(this);
+        sv = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
+
+        ly = (LinearLayout) findViewById(R.id.Layoutgaleria);
+
     }
 
     @Override
@@ -100,6 +115,21 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
+
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        if (event.isFromSource(InputDevice.SOURCE_CLASS_POINTER)) {
+            if (event.getAction() == MotionEvent.ACTION_HOVER_MOVE) {
+                Log.i("ACTIVIDAD", String.valueOf(ly.getChildCount() * 205));
+                Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
+                if (sv.getScrollX() >= 2140 ) {
+                    desplazar.setBackgroundResource(R.drawable.boton_izquierda2);
+                }
+                return true;
+            }
+        }
+        return super.onGenericMotionEvent(event);
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -147,6 +177,18 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
             case R.id.imageView4:
                 Intent intent3 = new Intent(ActivityGaleriaFotos.this, ActivityPresentation.class);
                 startActivityForResult(intent3, request);
+                break;
+            case R.id.boton_derecha:
+                Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
+                if ((des >= ly.getChildCount()*205)){
+                    des=0;
+                    desplazar.setBackgroundResource(R.drawable.boton_derecha2);
+                }
+                sv.smoothScrollTo(des, 0);
+                des=des+820;
+                if (des >= ly.getChildCount()*205){
+                    desplazar.setBackgroundResource(R.drawable.boton_izquierda2);
+                }
                 break;
         }
     }
