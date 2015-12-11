@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jons.bahiaduque.ActivityPresentation"
-    android:focusable="true">
+    android:focusable="false"
+    android:background="#030304">
 
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/style_baner_background">
+        android:background="@drawable/style_baner_background"
+        android:id="@+id/linearLayout2">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -49,21 +51,26 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="400dp"
-        android:layout_height="450dp"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
         android:id="@+id/imageChef"
         android:src="@drawable/foto_chef"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
         android:id="@+id/estrellas"
         android:src="@drawable/foto_michelin2"
         android:layout_gravity="left|top"
-        android:layout_above="@+id/textView"
-        android:layout_toEndOf="@+id/imageChef" />
+        android:background="#ffffff"
+        android:padding="0dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/Resenna"
+        android:layout_alignEnd="@+id/imageChef" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,37 +80,29 @@
         android:id="@+id/textView"
         android:layout_gravity="left|top"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/estrellas"
-        android:textColor="#85868a"
+        android:textColor="#af7950"
         android:fontFamily="TimesNewRoman"
-        android:textStyle="bold"/>
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="Carta"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/style_selectobuttoncarta"
-        android:id="@+id/buttonCarta"
-        android:layout_marginEnd="142dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_below="@+id/imageChef"
-        android:layout_alignEnd="@+id/textView" />
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/imageChef"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/chefBelga_frase"
+        android:background="@drawable/style_text_line"
         android:id="@+id/Resenna"
         android:textStyle="bold"
-        android:textColor="#798daa"
+        android:textColor="#af7950"
         android:textSize="20dp"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="62dp"
-        android:layout_above="@+id/buttonCarta"
         android:layout_alignEnd="@+id/textView"
-        android:layout_toEndOf="@+id/imageChef" />
+        android:layout_toEndOf="@+id/imageChef"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:padding="10dp" />
 
 </RelativeLayout>
