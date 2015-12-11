@@ -17,7 +17,6 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
-    private Button  buttonCarta;
     private int request;
 
     @Override
@@ -30,8 +29,6 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
         foto.setOnClickListener(this);
         carta = (ImageButton) findViewById(R.id.imageView4);
         carta.setOnClickListener(this);
-        buttonCarta = (Button) findViewById(R.id.buttonCarta);
-        buttonCarta.setOnClickListener(this);
     }
 
     @Override
@@ -75,10 +72,6 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
             case R.id.imageView3:
                 Intent intent2 = new Intent(ActivityPresentation.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent2, request);
-                break;
-            case R.id.buttonCarta:
-                Intent intent4 = new Intent(ActivityPresentation.this, ActivityCarta.class);
-                startActivityForResult(intent4, request);
                 break;
         }
     }
