@@ -33,6 +33,7 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
+    private ImageButton chef;
     private ImageButton desplazar;
     private int request;
     private HorizontalScrollView sv;
@@ -71,12 +72,14 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
         tmp12.setOnClickListener(this);
         imagen = (ImageView) findViewById(R.id.imagen1);
 
-        home = (ImageButton) findViewById(R.id.imageView2);
+        home = (ImageButton) findViewById(R.id.boton_home);
         home.setOnClickListener(this);
-        foto = (ImageButton) findViewById(R.id.imageView3);
+        foto = (ImageButton) findViewById(R.id.boton_galeria);
         foto.setOnClickListener(this);
-        carta = (ImageButton) findViewById(R.id.imageView4);
+        carta = (ImageButton) findViewById(R.id.boton_carta);
         carta.setOnClickListener(this);
+        chef = (ImageButton) findViewById(R.id.boto_chef);
+        chef.setOnClickListener(this);
 
         desplazar = (ImageButton) findViewById(R.id.boton_derecha);
         desplazar.setOnClickListener(this);
@@ -170,14 +173,21 @@ public class ActivityGaleriaFotos extends ActionBarActivity implements View.OnCl
             case R.id.imageButton12:
                 imagen.setImageResource(R.drawable.galeria_brasserie3);
             break;
-            case R.id.imageView2:
+            case R.id.boton_home:
                 Intent intent1 = new Intent(ActivityGaleriaFotos.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
-            case R.id.imageView4:
-                Intent intent3 = new Intent(ActivityGaleriaFotos.this, ActivityPresentation.class);
+            case R.id.boton_galeria:
+                Intent intent3 = new Intent(ActivityGaleriaFotos.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent3, request);
                 break;
+            case R.id.boto_chef:
+                Intent intent4 = new Intent(ActivityGaleriaFotos.this, ActivityPresentation.class);
+                startActivityForResult(intent4, request);
+            case R.id.boton_carta:
+                Intent intent5 = new Intent(ActivityGaleriaFotos.this, ActivityCarta.class);
+                startActivityForResult(intent5, request);
+
             case R.id.boton_derecha:
                 Log.i("ACTIVIDAD", String.valueOf(sv.getScrollX()));
                 if ((des >= ly.getChildCount()*205)){

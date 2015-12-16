@@ -5,7 +5,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="chefBelga">Chef belga y propietario del restaurante \"L\'Eau - vive \" en Namur con dos estrellas Michellin y la brasserie \"Le comptoir de L\'Eau - vive \"
-        en Erpent les propone una seleción de n platos tópicos de Brasseri adaptados al gusto de hoy.</string>
+        en Erpent les propone una seleción de platos tópicos de Brasseri adaptados al gusto de hoy.</string>
     <string name="chefBelga_frase">\"Pasión,creatividad y sabores son los ingredientes de mi cocina, espero que les guste \"</string>
     <string name="title_activity_activity_carta">ActividadCarta</string>
     <string name="large_text">
@@ -110,4 +110,9 @@
          Карпаччо из говядины, приготовленное при низкой температуре, пенка\n
          из тунца, лимонный конфи, каперсы и порошок из хлеба с чесноком
     </string>
+    <string name="travesia1">Paseo por la costa Sur de Tenerife. Posibilidad de snorkel durante el fondeo</string>
+    <string name="travesia2">Paseo por la costa Sur de Tenerife. Fondeo en la Playa de La Caleta de Adeje. Posibilidad de snorkel durante el fondeo</string>
+
+
+
 </resources>

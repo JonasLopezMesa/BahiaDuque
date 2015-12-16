@@ -16,7 +16,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
+            android:id="@+id/boton_home"
             android:background="@drawable/boton_home_pampano1"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical" />
@@ -24,7 +24,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
+            android:id="@+id/boton_galeria"
             android:background="@drawable/boton_galeria_pulsado"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp" />
@@ -32,17 +32,27 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
+            android:id="@+id/boto_chef"
+            android:background="@drawable/boton_chef"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_carta"
             android:background="@drawable/boton_carta"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp" />
+
+
 
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:id="@+id/imageButton13"
             android:src="@drawable/logo_blanco_cuadrado"
-            android:layout_marginLeft="1000dp"
+            android:layout_marginLeft="930dp"
             android:scaleType="fitXY"
             android:layout_marginTop="2dp" />
 

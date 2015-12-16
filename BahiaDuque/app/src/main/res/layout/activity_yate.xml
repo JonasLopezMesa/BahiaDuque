@@ -101,19 +101,12 @@
                         android:layout_width="439dp"
                         android:layout_height="match_parent"
                         android:id="@+id/imageDescripcion"
-                        android:src="@drawable/foto_descripcion_yate"
+                        android:src="@drawable/yate_total"
                         android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
                         android:layout_marginRight="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="335dp"
-                        android:layout_height="418dp"
-                        android:id="@+id/imageMedidas"
-                        android:background="@drawable/foto_yate_medidas"
-                        android:layout_marginLeft="15dp"
-                        android:longClickable="false" />
                 </LinearLayout>
 
             </FrameLayout>

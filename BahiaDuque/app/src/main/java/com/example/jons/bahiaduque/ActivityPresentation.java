@@ -1,14 +1,12 @@
 package com.example.jons.bahiaduque;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.support.v7.app.ActionBarActivity;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 
@@ -17,18 +15,23 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
     private ImageButton home;
     private ImageButton foto;
     private ImageButton carta;
+    private ImageButton chef;
     private int request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_presentation);
-        home = (ImageButton) findViewById(R.id.imageView2);
+
+        home = (ImageButton) findViewById(R.id.boton_home);
         home.setOnClickListener(this);
-        foto = (ImageButton) findViewById(R.id.imageView3);
+        foto = (ImageButton) findViewById(R.id.boton_galeria);
         foto.setOnClickListener(this);
-        carta = (ImageButton) findViewById(R.id.imageView4);
+        carta = (ImageButton) findViewById(R.id.boton_carta);
         carta.setOnClickListener(this);
+        chef =(ImageButton) findViewById(R.id.boto_chef);
+        chef.setOnClickListener(this);
     }
 
     @Override
@@ -65,14 +68,19 @@ public class ActivityPresentation extends ActionBarActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.imageView2:
+            case R.id.boton_home:
                 Intent intent1 = new Intent(ActivityPresentation.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
-            case R.id.imageView3:
+            case R.id.boton_galeria:
                 Intent intent2 = new Intent(ActivityPresentation.this, ActivityGaleriaFotos.class);
                 startActivityForResult(intent2, request);
                 break;
+            case R.id.boton_carta:
+                Intent intent3 = new Intent(ActivityPresentation.this, ActivityCarta.class);
+                startActivityForResult(intent3, request);
+                break;
         }
+
     }
 }

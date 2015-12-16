@@ -52,7 +52,7 @@ public class ActivityMainPampano extends ActionBarActivity implements View.OnCli
                 startActivityForResult(intent4, request);
                 break;
             case R.id.mapaBoton:
-                Intent intent5 = new Intent(ActivityMainPampano.this, ActivityMapa.class);
+                Intent intent5 = new Intent(ActivityMainPampano.this, ActivityTravesia.class);
                 startActivityForResult(intent5, request);
                 break;
         }

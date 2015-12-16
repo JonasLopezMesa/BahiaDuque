@@ -9,19 +9,23 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-public class ActivityYate extends ActionBarActivity implements View.OnClickListener {
+public class ActivityTravesia extends ActionBarActivity implements View.OnClickListener{
 
     private ImageButton home;
     private ImageButton galeria;
     private ImageButton barco;
     private ImageButton mapa;
+    private ImageButton trav1;
+    private ImageButton trav2;
+    private ImageButton trav3;
+    private ImageButton trav4;
+    private ImageButton trav5;
     private int request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yate);
-        hideVirtualButtons();
+        setContentView(R.layout.activity_travesia);
 
         home = (ImageButton) findViewById(R.id.homeBoton);
         home.setOnClickListener(this);
@@ -34,27 +38,61 @@ public class ActivityYate extends ActionBarActivity implements View.OnClickListe
 
         mapa = (ImageButton) findViewById(R.id.mapaBoton);
         mapa.setOnClickListener(this);
-    }
 
+        trav1 =(ImageButton) findViewById(R.id.botonTravesia1);
+        trav1.setOnClickListener(this);
+
+        trav2 =(ImageButton) findViewById(R.id.botonTravesia2);
+        trav2.setOnClickListener(this);
+
+        trav3 =(ImageButton) findViewById(R.id.botonTravesia3);
+        trav3.setOnClickListener(this);
+
+        trav4 =(ImageButton) findViewById(R.id.botonTravesia4);
+        trav4.setOnClickListener(this);
+
+        trav5 =(ImageButton) findViewById(R.id.botonTravesia5);
+        trav5.setOnClickListener(this);
+    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.homeBoton:
-                Intent intent1 = new Intent(ActivityYate.this, MainActivity.class);
+                Intent intent1 = new Intent(ActivityTravesia.this, MainActivity.class);
                 startActivityForResult(intent1, request);
                 break;
             case R.id.galeriaBoton:
-                Intent intent2 = new Intent(ActivityYate.this, ActivityPampano.class);
+                Intent intent2 = new Intent(ActivityTravesia.this, ActivityPampano.class);
                 startActivityForResult(intent2, request);
                 break;
             case R.id.barcoBoton:
-                Intent intent4 = new Intent(ActivityYate.this, ActivityYate.class);
+                Intent intent4 = new Intent(ActivityTravesia.this, ActivityYate.class);
                 startActivityForResult(intent4, request);
                 break;
             case R.id.mapaBoton:
-                Intent intent5 = new Intent(ActivityYate.this, ActivityTravesia.class);
+                Intent intent5 = new Intent(ActivityTravesia.this, ActivityTravesia.class);
                 startActivityForResult(intent5, request);
+                break;
+            case R.id.botonTravesia1:
+                Intent intent6 = new Intent(ActivityTravesia.this, ActivityMapa.class);
+                startActivityForResult(intent6, request);
+                break;
+            case R.id.botonTravesia2:
+                Intent intent7 = new Intent(ActivityTravesia.this, ActivityMapa.class);
+                startActivityForResult(intent7, request);
+                break;
+            case R.id.botonTravesia3:
+                Intent intent8 = new Intent(ActivityTravesia.this, ActivityMapa.class);
+                startActivityForResult(intent8, request);
+                break;
+            case R.id.botonTravesia4:
+                Intent intent9 = new Intent(ActivityTravesia.this, ActivityMapa.class);
+                startActivityForResult(intent9, request);
+                break;
+            case R.id.botonTravesia5:
+                Intent intent10 = new Intent(ActivityTravesia.this, ActivityMapa.class);
+                startActivityForResult(intent10, request);
                 break;
         }
     }
@@ -88,5 +126,4 @@ public class ActivityYate extends ActionBarActivity implements View.OnClickListe
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
-
 }

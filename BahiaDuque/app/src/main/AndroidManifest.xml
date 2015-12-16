@@ -42,12 +42,12 @@
         <activity android:name=".ActivityPampano" />
         <activity
             android:name=".ActivityMapa"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ActivityYate"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name=".ActivityMainPampano"></activity>
+            android:screenOrientation="landscape" />
+        <activity android:name=".ActivityMainPampano" />
+        <activity android:name=".ActivityTravesia"></activity>
     </application>
 
 </manifest>
